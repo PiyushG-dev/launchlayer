@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto py-8 px-6 flex justify-between items-center">
         <div>
           <Link href="/">
-            <Image src={logo} alt="logo" width={120} height={120} />
+            <Image src={logo} alt="logo" width={140} height={140} />
           </Link>
         </div>
         <div className="flex items-center gap-4">
