@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 
-const HeroHeading = ({ label, title, desc }) => {
+const HeroHeading = ({ label, emoji, title, desc }) => {
   return (
     <section className="w-full">
       <div className="max-w-screen-xl mx-auto pt-16 pb-8">
@@ -17,7 +17,7 @@ const HeroHeading = ({ label, title, desc }) => {
               >
                 {label}
               </span>
-              🚀
+              <span>{emoji}</span>
             </AnimatedGradientText>
             <h1 className="text-7xl tracking-[-3.4px] mt-2">
               We simplify {title}
