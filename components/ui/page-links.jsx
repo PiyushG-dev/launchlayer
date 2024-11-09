@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const PageLinks = ({ pageLinks }) => {
   const pathname = usePathname();
   return (
-    <div className="flex items-center gap-6">
+    <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-6 lg:flex lg:items-center">
       {pageLinks.map((link) => {
         return (
           <Button
