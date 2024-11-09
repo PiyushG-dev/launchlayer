@@ -2,7 +2,7 @@ import HeroHeading from "@/components/ui/hero-heading";
 import PageLinks from "@/components/ui/page-links";
 import { designLinks } from "@/constants";
 import { Switch } from "@/components/ui/switch";
-export default function FeaturesLayout({ children }) {
+export default function PricingLayout({ children }) {
   return (
     <div className="w-full">
       <div className="max-w-screen-xl mx-auto px-6">
