@@ -19,11 +19,11 @@ const HeroHeading = ({ label, emoji, title, desc }) => {
               </span>
               <span>{emoji}</span>
             </AnimatedGradientText>
-            <h1 className="text-7xl tracking-[-3.4px] mt-2">
+            <h1 className="text-center text-5xl tracking-tighter sm:text-7xl sm:tracking-[-3.4px] mt-2">
               We simplify {title}
             </h1>
           </div>
-          <p className="text-lg text-slate-500 tracking-tighter w-2/4 text-center ">
+          <p className="tracking-tight sm:text-lg text-slate-500 sm:tracking-tighter sm:w-3/4 lg:w-2/4 text-center">
             Our database makes it easy to explore, gather ideas, and elevate
             your projects with a vast collection of high-quality designs
             tailored for SaaS.
