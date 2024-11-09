@@ -39,8 +39,8 @@ export const designLinks = [
   },
   {
     id: 5,
-    name: "Pricing",
-    href: "/pricing",
+    name: "Contact us",
+    href: "/contact-us",
   },
   {
     id: 6,

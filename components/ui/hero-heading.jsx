@@ -6,7 +6,7 @@ import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 const HeroHeading = ({ label, emoji, title, desc }) => {
   return (
     <section className="w-full">
-      <div className="max-w-screen-xl mx-auto pt-16 pb-8">
+      <div className="pt-16 pb-8">
         <div className="flex flex-col items-center gap-4">
           <div>
             <AnimatedGradientText>
