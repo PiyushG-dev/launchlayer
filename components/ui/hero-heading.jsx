@@ -2,11 +2,14 @@ import React from "react";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+import { Button } from "./button";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const HeroHeading = ({ label, emoji, title, desc }) => {
   return (
     <section className="w-full">
-      <div className="pt-16 pb-8">
+      <div className="pt-36 pb-8">
         <div className="flex flex-col items-center gap-4">
           <div>
             <AnimatedGradientText>
@@ -19,15 +22,24 @@ const HeroHeading = ({ label, emoji, title, desc }) => {
               </span>
               <span>{emoji}</span>
             </AnimatedGradientText>
-            <h1 className="text-center text-5xl tracking-tighter sm:text-7xl sm:tracking-[-3.4px] mt-2">
-              We simplify {title}
+            <h1 className="text-center text-5xl tracking-tighter sm:text-7xl sm:tracking-[-3.4px] sm:max-w-3xl mt-2">
+              Making design easy for engineers
             </h1>
           </div>
           <p className="tracking-tight sm:text-lg text-slate-500 sm:tracking-tighter sm:w-3/4 lg:w-2/4 text-center">
-            Our database makes it easy to explore, gather ideas, and elevate
-            your projects with a vast collection of high-quality designs
-            tailored for SaaS.
+            Open source components built with React, JavaScript, Tailwind CSS,
+            and Framer Motion &#8208; the perfect companion for shadcn/ui.
           </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <Button asChild>
+              <Link href="/components">
+                View all components <ArrowRight strokeWidth={2} />
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <Link href="/request">Request a block</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>

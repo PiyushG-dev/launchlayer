@@ -31,7 +31,7 @@ const Navbar = () => {
               {navlinks.map((link) => (
                 <Link key={link.id} href={link.href}>
                   <span
-                    className={`cursor-pointer text-lg tracking-tighter transition-all duration-300 px-2 py-1 rounded-sm hover:bg-slate-100 ${
+                    className={`cursor-pointer tracking-tighter transition-all duration-300 px-2 py-1 rounded-sm hover:bg-slate-100 ${
                       pathname === link.href
                         ? "text-slate-900"
                         : "text-slate-500"
@@ -163,6 +163,11 @@ const Navbar = () => {
                 </svg>
               </a>
             </div>
+            <Button asChild>
+              <Link href="/components">
+                Get Started <ArrowRight strokeWidth={2} />
+              </Link>
+            </Button>
           </nav>
         </div>
       </div>

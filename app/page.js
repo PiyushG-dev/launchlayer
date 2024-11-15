@@ -5,7 +5,7 @@ export default function Home() {
       <div className="max-w-screen-xl mx-auto px-6">
         <HeroHeading
           title="SaaS design"
-          label="Design inspirations"
+          label="Powered by shadcn/ui"
           emoji="🚀"
         />
       </div>
