@@ -6,7 +6,7 @@ import { navlinks } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Navbar = () => {
