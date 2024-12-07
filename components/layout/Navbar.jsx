@@ -1,13 +1,13 @@
 "use client";
 import React, { useState } from "react";
-import Image from "next/image";
-import { logo } from "@/utils";
 import { navlinks } from "@/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { ModeToggle } from "../ui/mode-toggle";
+import Logo from "../ui/logo";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto py-8 px-6 flex justify-between items-center">
         <div>
           <Link href="/">
-            <Image src={logo} alt="logo" width={140} height={140} />
+            <Logo />
           </Link>
         </div>
 
@@ -31,10 +31,10 @@ const Navbar = () => {
               {navlinks.map((link) => (
                 <Link key={link.id} href={link.href}>
                   <span
-                    className={`cursor-pointer tracking-tighter transition-all duration-300 px-2 py-1 rounded-sm hover:bg-slate-100 ${
+                    className={`cursor-pointer tracking-tighter transition-all duration-300 px-2 py-1 rounded-sm hover:bg-muted ${
                       pathname === link.href
-                        ? "text-slate-900"
-                        : "text-slate-500"
+                        ? "text-primary"
+                        : "text-muted-foreground"
                     }`}
                   >
                     {link.name}
@@ -43,7 +43,7 @@ const Navbar = () => {
               ))}
             </div>
             {/* Social icons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-5">
               <a
                 href="https://github.com/piyushg-dev/launchlayer"
                 target="_blank"
@@ -54,7 +54,7 @@ const Navbar = () => {
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="fill-black hover:fill-slate-600 transition-all ease-in cursor-pointer"
+                  className="fill-primary hover:fill-muted-foreground transition-all ease-in cursor-pointer"
                 >
                   <g clipPath="url(#clip0_24_101)">
                     <path
@@ -77,11 +77,12 @@ const Navbar = () => {
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="fill-black hover:fill-slate-600 transition-all ease-in cursor-pointer"
+                  className="fill-primary hover:fill-muted-foreground transition-all ease-in cursor-pointer"
                 >
                   <path d="M15.2031 1.875H17.9609L11.9375 8.75781L19.0234 18.125H13.4766L9.12891 12.4453L4.16016 18.125H1.39844L7.83984 10.7617L1.04688 1.875H6.73437L10.6602 7.06641L15.2031 1.875ZM14.2344 16.4766H15.7617L5.90234 3.4375H4.26172L14.2344 16.4766Z" />
                 </svg>
               </a>
+              <ModeToggle />
             </div>
           </div>
           <Button asChild>
