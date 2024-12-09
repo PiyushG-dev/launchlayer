@@ -1,5 +1,7 @@
 import ShadcnCmdCopy from "@/components/ui/shadcn-cmd-copy";
 import React from "react";
+import { componentPages } from "@/constants";
+import ComponentPageCard from "@/components/ui/component-page-card";
 // import ComponentViewer from "@/components/layout/ComponentViewer";
 // import SampleComponent from "@/components/user-library/SampleComponent";
 
@@ -28,7 +30,7 @@ import React from "react";
 const Components = () => {
   return (
     <div className="w-full">
-      <div className="max-w-screen-xl mx-auto px-6 py-16">
+      <div className="max-w-screen-xl mx-auto px-6 py-16 flex flex-col gap-10 items-center">
         <div className="flex flex-col gap-4 items-center">
           <div className="flex items-center flex-col gap-2">
             <div className="flex flex-col gap-1">
@@ -46,6 +48,24 @@ const Components = () => {
           </div>
           <ShadcnCmdCopy />
         </div>
+        <div className="grid grid-cols-3 gap-6">
+          {componentPages.map((card) => {
+            return (
+              <ComponentPageCard
+                key={card.id}
+                icon={card.icon}
+                name={card.name}
+                description={card.desc}
+                status={card.status}
+                href={card.href}
+              />
+            );
+          })}
+        </div>
+        <p className="tracking-tight sm:text-lg text-muted-foreground sm:tracking-tighter">
+          Customers, social proof, contact and many more sections{" "}
+          <span className="text-primary">coming soon</span>
+        </p>
       </div>
     </div>
   );

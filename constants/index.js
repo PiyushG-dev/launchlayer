@@ -1,3 +1,12 @@
+import {
+  Cpu,
+  ChartLine,
+  Phone,
+  HandCoins,
+  Star,
+  Navigation,
+} from "lucide-react";
+
 export const navlinks = [
   {
     id: 1,
@@ -11,45 +20,53 @@ export const navlinks = [
   },
 ];
 
-export const designLinks = [
+export const componentPages = [
   {
     id: 1,
-    name: "Landing pages",
-    href: "/",
+    icon: <Cpu />,
+    name: "Hero sections",
+    desc: "The hero section of a website is the first visual area that visitors see",
+    href: "/components/hero",
+    status: "available",
   },
   {
     id: 2,
-    name: "Features",
-    href: "/features",
+    icon: <ChartLine />,
+    name: "Feature sections",
+    desc: "The hero section of a website is the first visual area that visitors see",
+    href: "/components/feature",
+    status: "available",
   },
   {
     id: 3,
-    name: "Pricing",
-    href: "/pricing",
+    icon: <Phone />,
+    name: "CTA sections",
+    desc: "The hero section of a website is the first visual area that visitors see",
+    href: "components/cta",
+    status: "available",
   },
   {
     id: 4,
-    name: "Customers",
-    href: "/customers",
+    icon: <HandCoins />,
+    name: "Pricing sections",
+    desc: "The hero section of a website is the first visual area that visitors see",
+    href: "/components/pricing",
+    status: "NA",
   },
   {
     id: 5,
-    name: "Contact us",
-    href: "/contact-us",
+    icon: <Star />,
+    name: "Testimonial sections",
+    desc: "The hero section of a website is the first visual area that visitors see",
+    href: "components/testimonial",
+    status: "NA",
   },
   {
     id: 6,
-    name: "About Us",
-    href: "/about-us",
-  },
-  {
-    id: 7,
-    name: "Blog",
-    href: "/blog",
-  },
-  {
-    id: 8,
-    name: "Testimonials",
-    href: "/testimonials",
+    icon: <Navigation />,
+    name: "Navigation",
+    desc: "The hero section of a website is the first visual area that visitors see",
+    href: "components/navigation",
+    status: "NA",
   },
 ];
