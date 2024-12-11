@@ -37,7 +37,7 @@ const Components = () => {
               <span className="font-semibold text-sm uppercase text-purple-500 text-center block tracking-widest">
                 components
               </span>
-              <h4 className="text-4xl tracking-tighter font-medium">
+              <h4 className="text-4xl tracking-tighter font-medium text-center">
                 Build modern interfaces superfast
               </h4>
             </div>
@@ -48,7 +48,7 @@ const Components = () => {
           </div>
           <ShadcnCmdCopy />
         </div>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
           {componentPages.map((card) => {
             return (
               <ComponentPageCard
