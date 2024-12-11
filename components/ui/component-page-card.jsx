@@ -6,7 +6,12 @@ import { ArrowRight } from "lucide-react";
 const ComponentPageCard = ({ icon, name, description, status, href }) => {
   const [hovered, setHovered] = useState(false);
   return (
-    <div className="py-8 px-6 bg-muted border border-slate-300 rounded-lg flex flex-col items-start gap-3">
+    <Link
+      href={href}
+      onMouseOver={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="py-8 px-6 bg-muted border border-slate-300 rounded-lg flex flex-col items-start gap-3"
+    >
       <div className="px-2 py-2 border border-slate-200 rounded-lg bg-background inline-block">
         {icon}
       </div>
@@ -18,9 +23,7 @@ const ComponentPageCard = ({ icon, name, description, status, href }) => {
           </p>
         </div>
         {status === "available" ? (
-          <Link
-            onMouseOver={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+          <div
             className="font-medium tracking-tight text-sm flex items-center gap-1"
             href={href}
           >
@@ -34,12 +37,12 @@ const ComponentPageCard = ({ icon, name, description, status, href }) => {
               size={14}
               strokeWidth={2}
             />
-          </Link>
+          </div>
         ) : (
           <p className="font-medium tracking-tight text-sm">Coming soon</p>
         )}
       </div>
-    </div>
+    </Link>
   );
 };
 
