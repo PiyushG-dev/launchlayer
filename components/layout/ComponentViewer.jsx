@@ -7,7 +7,6 @@ const ComponentViewer = ({ component: Component, code }) => {
   const [viewMode, setViewMode] = useState("preview"); // "preview" or "code"
   const [viewport, setViewport] = useState("lg"); // Options: sm, md, lg
 
-  // Dynamically apply Tailwind classes for responsiveness
   const viewportClasses = {
     sm: "max-w-sm",
     md: "max-w-md",
