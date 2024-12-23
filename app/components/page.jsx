@@ -1,4 +1,4 @@
-import ShadcnCmdCopy from "@/components/ui/shadcn-cmd-copy";
+import PackageCmdCopy from "@/components/ui/package-cmd-copy";
 import React from "react";
 import { componentPages } from "@/constants";
 import ComponentPageCard from "@/components/ui/component-page-card";
@@ -31,7 +31,7 @@ const Components = () => {
   return (
     <div className="w-full">
       <div className="max-w-screen-xl mx-auto px-6 py-16 flex flex-col gap-10 items-center">
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col gap-6 items-center">
           <div className="flex items-center flex-col gap-2">
             <div className="flex flex-col gap-1">
               <span className="font-semibold text-sm uppercase text-purple-500 text-center block tracking-widest">
@@ -46,7 +46,20 @@ const Components = () => {
               new blocks added weekly to help you build and launch faster.
             </p>
           </div>
-          <ShadcnCmdCopy />
+          <div className="flex gap-6 items-center">
+            <div className="flex items-center gap-2">
+              <div className="w-9 h-9 bg-muted border border-slate-300 rounded-full flex items-center justify-center text-lg font-medium">
+                1
+              </div>
+              <PackageCmdCopy cmd="npx create-next-app@latest" />
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-9 h-9 bg-muted border border-slate-300 rounded-full flex items-center justify-center text-lg font-medium">
+                2
+              </div>
+              <PackageCmdCopy cmd="npx shadcn@latest init" />
+            </div>
+          </div>
         </div>
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6">
           {componentPages.map((card) => {

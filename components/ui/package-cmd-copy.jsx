@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import { Clipboard, Check } from "lucide-react";
 
-const ShadcnCmdCopy = () => {
+const PackageCmdCopy = ({ cmd }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("npx shadcn@latest init");
+    navigator.clipboard.writeText(cmd);
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
@@ -18,7 +18,7 @@ const ShadcnCmdCopy = () => {
       onClick={handleCopy}
       className="flex items-center gap-2 border border-muted-foreground rounded-md px-4 py-2 cursor-pointer hover:text-muted-foreground transition-colors"
     >
-      <p className="text-sm font-mono ">npx shadcn@latest init</p>
+      <p className="text-sm font-mono ">{cmd}</p>
       {copied ? (
         <Check size={16} />
       ) : (
@@ -28,4 +28,4 @@ const ShadcnCmdCopy = () => {
   );
 };
 
-export default ShadcnCmdCopy;
+export default PackageCmdCopy;
