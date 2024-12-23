@@ -22,7 +22,7 @@ const HeroHeading = () => {
               <span>🚀</span>
             </AnimatedGradientText>
             <h1 className="text-center text-5xl tracking-tighter sm:text-7xl sm:tracking-[-3.4px] sm:max-w-3xl mt-2">
-              Making design easy for engineers
+              An extensive collection of shadcn blocks
             </h1>
           </div>
           <p className="tracking-tight sm:text-lg text-muted-foreground sm:tracking-tighter sm:w-3/4 lg:w-2/4 text-center">

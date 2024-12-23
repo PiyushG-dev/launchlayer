@@ -46,7 +46,7 @@ const Components = () => {
               new blocks added weekly to help you build and launch faster.
             </p>
           </div>
-          <div className="flex gap-6 items-center">
+          <div className="flex flex-col gap-6 items-start sm:items-center sm:flex-row">
             <div className="flex items-center gap-2">
               <div className="w-9 h-9 bg-muted border border-slate-300 rounded-full flex items-center justify-center text-lg font-medium">
                 1
