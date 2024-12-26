@@ -52,7 +52,7 @@ const Components = () => {
           })}
         </div>
         <p className="tracking-tight sm:text-lg text-muted-foreground sm:tracking-tighter">
-          Customers, social proof, contact and many more sections{" "}
+          Customers, social proof, contact and many more sections
           <span className="text-primary">coming soon</span>
         </p>
       </div>
