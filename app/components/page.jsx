@@ -5,12 +5,12 @@ import ComponentPageCard from "@/components/ui/component-page-card";
 
 const Components = () => {
   return (
-    <div className="w-full">
+    <section className="w-full">
       <div className="max-w-screen-xl mx-auto px-6 py-16 flex flex-col gap-10 items-center">
         <div className="flex flex-col gap-6 items-center">
           <div className="flex items-center flex-col gap-2">
             <div className="flex flex-col gap-1">
-              <span className="font-semibold text-sm uppercase text-purple-500 text-center block tracking-widest">
+              <span className="font-semibold text-sm uppercase text-slate-400 text-center block tracking-widest">
                 components
               </span>
               <h4 className="text-4xl tracking-tighter font-medium text-center">
@@ -52,11 +52,11 @@ const Components = () => {
           })}
         </div>
         <p className="tracking-tight sm:text-lg text-muted-foreground sm:tracking-tighter">
-          Customers, social proof, contact and many more sections
+          Customers, social proof, contact and many more sections{" "}
           <span className="text-primary">coming soon</span>
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
